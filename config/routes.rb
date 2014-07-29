@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  get "invite/new"
+  resources :invites
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
@@ -10,7 +12,7 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 
-  
+  match '/new', to: 'invites#new', via: 'get'  
   
 
   # See how all your routes lay out with "rake routes".
