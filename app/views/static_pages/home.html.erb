@@ -1,13 +1,51 @@
-<div class="center hero-unit">
-  <h1>Welcome to the Sample App</h1>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,200,300,500,700' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/site-specific.css" />
 
-  <h2>
-    This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
+<div class="center">
+  <h1 style= "font-family: 'Roboto';
+  font-weight: 300;
+  margin-top:10%;
+  color: #262626;
+  font-size:120px;
+  margin-left: 40px;
+    float:inline !important;
+    font: 125px/125px 'HelveticaNeue-Thin', 'Helvetica Neue Thin', Arial, sans-serif;
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+  color:white !important;">choreo.<span style = "color: #F787B8;">io</h1>
+
+
+
+  <h1 style= "font-family: 'Roboto';
+  font-weight: 300;
+  font-size:35px;
+  color: #262626;
+  margin-top:0% !important;
+  margin-left: 40px;
+  margin-bottom:40px;
+  color: #F787B8 !important;
+font: 50px/50px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Arial, sans-serif;
+letter-spacing: 1px;">dancers wanted.</h1></div>
+
+<div class="span8 offset2">
+	<%= form_for User.new do |f| %>
+	<form id="something"/>
+
+      <%= f.text_field :email, :placeholder => "email", :input_html => { :class => "table-price-item" }, 
+    :label => false %>
+
+    
+
+      <%= f.submit "request an invite", class: "submit" %>
+<!--
+      <p>
+    	<h2 style= "font-family: 'Roboto';
+  font-weight: 300;
+  color: #262626;
+  font-size:25px;
+  color:white !important;">trade email for invite</h2>	-->
+    <% end %>
+
+
+  
+
 </div>
-
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>

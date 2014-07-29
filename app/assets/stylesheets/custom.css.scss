@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -18,6 +19,8 @@ html {
 
 body {
   padding-top: 60px;
+  background: url('landing-bg-3.png');
+
 }
 
 section {
@@ -33,6 +36,7 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+
 }
 
 /* typography */
@@ -46,6 +50,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  text-color:white !important;
 }
 
 h2 {
@@ -55,6 +60,16 @@ h2 {
   text-align: center;
   font-weight: normal;
   color: $grayLight;
+}
+
+h7 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-color:white;
+  
+
 }
 
 p {
@@ -67,17 +82,36 @@ p {
 
 #logo {
   float: left;
-  margin-right: 10px;
+  margin-right: 0px;
   font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1;
+  padding
   &:hover {
-    color: white;
+    color: $grayMediumLight;
     text-decoration: none;
+    underline:none;
+  }
+}
+#logo2 {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #F787B8;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: normal;
+  line-height: 1;
+  padding
+  &:hover {
+    color: $grayMediumLight;
+    text-decoration: none;
+    underline:none;
   }
 }
 
@@ -145,7 +179,7 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: none;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
@@ -181,4 +215,83 @@ input {
       border-bottom: 1px solid $grayLighter;
     }
   }
+}
+
+/*landing page*/
+
+#background-stretch {
+  left: 0;
+  top: 0;
+  margin: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0px;
+  position: fixed;
+  z-index: -1;
+  height: 140%;
+  width: 140%;
+  background: #000 url('/assets/landing-bg-3.png') top left no-repeat;
+  background-size: cover !important;
+  -moz-background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-position-y: -200px !important; 
+  opacity: 0;
+}
+
+
+input[type="text"] {
+  margin-left:79px;
+  text-align:center !important;
+  background-color:transparent !important;
+  box-shadow:none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  width: 270px;
+  border-bottom: 4px, white !important;
+  float:inline !important;
+  #width:300px;
+  margin-right:10px;
+  text-size:20px !important;
+  font: 20px/20px 'HelveticaNeue-Thin', 'Helvetica Neue Thin', Arial, sans-serif;
+  letter-spacing: 1px;
+  margin-top: 14px;
+  color: white;
+  opacity: .8;
+  letter-spacing: 1.5px;
+}
+
+.table-price-item{
+  text-align:20px;
+
+}
+
+.submit{
+    border: solid 2px #fff !important;
+    font-size: 20px;
+
+    border-radius: 100px;
+    opacity: .2 !important;
+    padding: 20px 22px !important;
+    float: inline;
+    padding: 10px !important;
+    margin: 10px;
+    border-radius: 14px;
+    background-color: transparent;
+    color: white;
+    opacity: 0.6 !important;
+    font: 20px/20px 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Arial, sans-serif;
+    letter-spacing: 1px;
+    border-width: 1px !important;
+
+}
+
+.labeling{
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: #262626;
+  margin-top:20% !important;
+  margin-left: 40px;
+  color:white !important;
+
 }
